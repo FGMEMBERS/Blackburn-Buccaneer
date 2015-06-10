@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="10">
+      <label>Buccaneer</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+<!--	  
+<item>
+						<label>Toggle pilot model</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>/sim/model/buccaneer/config/show-pilot</property>
+						</binding>
+					</item>
+					<item>
+						<label>Toggle G-induced head movement</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>/sim/headshake/enabled</property>
+						</binding>
+					</item>
+					-->
+    </menu>
+  </default>
+
+</PropertyList>
+

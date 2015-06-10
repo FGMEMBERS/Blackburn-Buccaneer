@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+<model>
+<path>cockpit.ac</path>
+<offsets>
+			<x-m>9.16</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.02</z-m>
+		</offsets>
+</model>
+
+	<!-- ***************** Cockpit *************************** -->
+	<rear-panel>
+		<offsets>
+			<x-m>-4.6</x-m>
+			<y-m>-0.4</y-m>
+			<z-m>0.65</z-m>
+		</offsets>
+	</rear-panel>
+
+	<panel>
+		<path>Aircraft/Blackburn-Buccaneer/Panels/radar-panel.xml</path>
+		<name>Radar-Panel</name>
+		<bottom-left>
+			<x-m>4.6</x-m>
+			<!--<x-m alias="../../../rear-panel/offsets/x-m"/>-->
+			<y-m>-0.4</y-m>
+			<!--<y-m alias="../../../rear-panel/offsets/y-m"/>-->
+			<z-m>0.65</z-m>
+			<!--<z-m alias="../../../rear-panel/offsets/z-m"/>-->
+		</bottom-left>
+		<bottom-right>
+			<x-m>4.40</x-m>
+			<!--<x-m alias="../../../rear-panel/offsets/x-m"/>-->
+			<y-m>-0.15</y-m>
+			<z-m>0.65</z-m>
+			<!--<z-m alias="../../../rear-panel/offsets/z-m"/>-->
+		</bottom-right>
+		<top-left>
+			<x-m>4.6</x-m>
+			<!--<x-m alias="../../../rear-panel/offsets/x-m"/>-->
+			<y-m>-0.4</y-m>
+			<!--<y-m alias="../../../rear-panel/offsets/y-m"/>-->
+			<z-m> 0.9</z-m>
+		</top-left>
+	</panel>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Radar-Panel</object-name>
+		<offset>45</offset>
+		<center>
+			<x-m>4.07546</x-m>
+			<y-m>-0.0499988</y-m>
+			<z-m>0.920013</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- **************** Instruments ********************* -->
+
+
+
+	<!-- **************** Over Glare Shield********** -->
+	<over-main-panel>
+		<offsets>
+			<x-m>3.36104</x-m>
+		</offsets>
+	</over-main-panel>
+
+	<!-- E2b -->
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/e2b.xml</path>
+		<offsets>
+			<x-m>3.45</x-m>
+			<y-m></y-m>
+			<z-m>1.19</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/asi.xml</path>
+		<offsets>
+			<x-m>3.35</x-m>
+			<y-m>-0.212109</y-m>
+			<z-m>0.87</z-m>
+			<roll-deg>0</roll-deg>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/blowing_press.xml</path>
+		<offsets>
+			<x-m>3.3</x-m>
+			<y-m>0.15</y-m>
+			<z-m>0.97</z-m>
+			<roll-deg>-12.5</roll-deg>
+			<pitch-deg>-10</pitch-deg>
+			<heading-deg>0</heading-deg>
+		</offsets>
+	</model>
+
+	<!-- *********** Port Coaming Panel ********** -->
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/port_coaming_panel.xml</path>
+		<offsets>
+			<x-m>3.36</x-m>
+			<y-m>-0.35</y-m>
+			<z-m>0.81</z-m>
+			<heading-deg>0</heading-deg>
+		</offsets>
+			<overlay>
+		 <animation n="101">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1.5</x-offset>
+    <y-offset>1.5</y-offset>
+    <z-offset>1.5</z-offset>
+   </animation>
+   </overlay>
+	
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/stbd_coaming_panel.xml</path>
+		<offsets>
+			<x-m>3.37</x-m>
+			<y-m>0.29</y-m>
+			<z-m>0.85</z-m>
+			<heading-deg>-15</heading-deg>
+		</offsets>
+		<overlay>
+		 <animation n="101">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1.3</x-offset>
+    <y-offset>1.3</y-offset>
+    <z-offset>1.3</z-offset>
+   </animation>
+   </overlay>
+	</model>
+
+	<!-- *********** Throttle Panel ********** -->
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/throttle_panel.xml</path>
+	
+		<offsets>
+			<x-m>3.78</x-m>
+			<y-m>-0.425</y-m>
+			<z-m>0.4</z-m>
+		</offsets>
+	</model>
+
+	<!-- **************** Main Panel ********** -->
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Models/main-panel.xml</path>
+		<offsets>
+			<x-m>-0.04</x-m>
+			<y-m>0</y-m>
+			<z-m>0.10</z-m>
+		</offsets>
+	</model>
+
+	<!-- **************** Stbd Panel ********** 
+	<stbd-panel>
+		<offsets>
+			<pitch-deg>25.0</pitch-deg>
+			<roll-deg>10.0</roll-deg>
+		</offsets>
+	</stbd-panel>
+-->
+	<!--<model>
+		<path>AI/Aircraft/Blackburn-Buccaneer/Instruments/fuel_gauges.xml</path>
+		<offsets>
+			<x-m>3.602</x-m>
+			<y-m>0.35</y-m>
+			<z-m>0.49</z-m>
+			<pitch-deg alias="../../../stbd-panel/offsets/pitch-deg"/>
+			<roll-deg alias="../../../stbd-panel/offsets/roll-deg"/>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/fuel_panel.xml</path>
+		<offsets>
+			<offsets>
+			<x-m>9.78</x-m>
+			<y-m>0.425</y-m>
+			<z-m>1.4</z-m>
+		</offsets>
+		</offsets>
+	</model>
+-->
+
+	<!--<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/stick.xml</path>
+		<offsets>
+			<x-m>-0.05</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.05</z-m>
+		</offsets>
+	</model>-->
+
+	<!--	
+	<model>
+		<path>Aircraft/Hunter/Models/turn.xml</path>
+		<name>Turn</name>
+		<offsets>
+			<x-m>-4.83</x-m>
+			<y-m>0.11</y-m>
+			<z-m>0.37</z-m>
+		</offsets>
+	</model>
+
+
+	<model>
+		<path>Aircraft/Hunter/Models/dme.xml</path>
+		<offsets>
+			<x-m>-4.83</x-m>
+			<y-m>0.185</y-m>
+			<z-m>0.50</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Hunter/Models/dimmer.xml</path>
+		<offsets>
+			<x-m>-4.83</x-m>
+			<y-m>0.09</y-m>
+			<z-m>0.30</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Hunter/Models/nav-light-switch.xml</path>
+		<offsets>
+			<x-m>-4.83</x-m>
+			<y-m>0.15</y-m>
+			<z-m>0.30</z-m>
+		</offsets>
+	</model>
+
+	-->
+	<!-- **************** Right Panel *********** -->
+	<!--
+
+	<model>
+		<path>Aircraft/Hunter/Models/egt.xml</path>
+		<offsets>
+			<x-m>-4.81</x-m>
+			<y-m>0.275</y-m>
+			<z-m>0.45</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Hunter/Models/adf.xml</path>
+		<offsets>
+			<x-m>-4.81</x-m>
+			<y-m>0.275</y-m>
+			<z-m>0.35</z-m>
+		</offsets>
+	</model>
+
+	-->
+	<!-- **************** Left Panel *********** -->
+	<!--
+
+	<model>
+		<path>Aircraft/Hunter/Models/airbrake-warning.xml</path>
+		<offsets>
+			<x-m>-4.81</x-m>
+			<y-m>-0.29</y-m>
+			<z-m>0.27</z-m>
+		</offsets>
+
+	</model>
+
+	-->
+	<!-- **************** Right Top Panel***************** -->
+	<!--
+
+	<model>
+		<path>Aircraft/Hunter/Models/pilot-g.xml</path>
+		<offsets>
+			<x-m>-4.75</x-m>
+			<y-m>0.11</y-m>
+			<z-m>0.625</z-m>
+		</offsets>
+	</model>
+
+	-->
+	<!-- ************* Right Lower Side Panel ******* -->
+	<!--
+
+	<model>
+		<path>Aircraft/Hunter/Models/fuel-left.xml</path>
+		<offsets>
+			<x-m>-4.65</x-m>
+			<y-m>0.30</y-m>
+			<z-m>0.145</z-m>
+			<pitch-deg>-60</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Hunter/Models/fuel-right.xml</path>
+		<offsets>
+			<x-m>-4.65</x-m>
+			<y-m>0.38</y-m>
+			<z-m>0.145</z-m>
+			<pitch-deg>-60</pitch-deg>
+		</offsets>
+	</model>
+
+	-->
+	<!-- Gear Indicator Panel-->
+	<!--
+
+	<model>
+		<path>Aircraft/Hunter/Models/gear.xml</path>
+		<name>Gear-Indicator</name>
+		<offsets>
+			<x-m>-4.81</x-m>
+			<y-m>-0.37</y-m>
+			<z-m>0.29</z-m>
+			<pitch-deg>-15</pitch-deg>
+			<heading-deg>35</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Hunter/Models/ggs.xml</path>
+		<name>Gunsight</name>
+		<offsets>
+			<x-m>-4.75</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.65</z-m>
+		</offsets>
+	</model>
+	 
+	 <model>
+		<path>Aircraft/SeaVixen/Models/aoa-indexer.xml</path>
+		<offsets>
+			<x-m>3.140</x-m>
+			<y-m>-0.59</y-m>
+			<z-m> 0.828</z-m>
+		</offsets>
+	</model>
+
+
+	<model>
+		<path>Aircraft/Hunter/Models/blackout.xml</path>
+		<name>Blackout</name>
+		<offsets>
+			<x-m>-4.23661</x-m>
+			<y-m>0</y-m>
+			<z-m>0.765417</z-m>
+		</offsets>
+	</model>
+
+	-->
+
+
+	<!-- ***** Navigation Lights ****** -->
+	<!--
+
+	<model>
+		<path>Aircraft/Hunter/Models/light-green.xml</path>
+		<name>Stbd-Light</name>
+		<offsets>
+			<x-m>0.839935</x-m>
+			<y-m>4.7883</y-m>
+			<z-m>-0.100609</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Hunter/Models/light-red.xml</path>
+		<name>Port-Light</name>
+		<offsets>
+			<x-m>0.839935</x-m>
+			<y-m>-4.7883</y-m>
+			<z-m>-0.100609</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Hunter/Models/light-white.xml</path>
+		<name>Tail-Light</name>
+		<offsets>
+			<x-m>6.487</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.86</z-m>
+		</offsets>
+	</model>
+
+	-->
+	<!-- hide droptank pylons in all views-->
+	<!--
+
+	<animation>
+		<type>select</type>
+		<object-name>Pylon-L</object-name>
+		<object-name>Pylon-R</object-name>
+	</animation>
+	
+	-->
+	<!-- hide all of the model not visible from the cockpit -->
+	<!-- order objects -->
+
+	<animation>
+		<type>select</type>
+		<object-name>Radar-Panel</object-name>
+		<condition>
+			<and>
+				<property>sim/current-view/internal</property>
+				<not>
+					<equals>
+						<property>sim/current-view/name</property>
+						<value>Model Cockpit View</value>
+					</equals>
+				</not>
+			</and>
+		</condition>
+	</animation>
+
+
+</PropertyList>
+

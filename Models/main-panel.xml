@@ -1,0 +1,420 @@
+<?xml version="1.0"?>
+<!-- Blackburn-Buccaneer main panel -->
+<!-- Vivian Meazza 2007/11/6 vivian.meazza@lineone.net -->
+<!-- Ver 0.1.1 -->
+
+<PropertyList>
+
+
+<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/Canvas-HUD.xml</path>
+		
+		<offsets>
+			<x-m>3.3518</x-m>
+			<y-m>-0.01</y-m>
+			<z-m>0.95</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.5</x-offset>
+    <y-offset>0.5</y-offset>
+    <z-offset>0.5</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+	<!-- **************** Main Panel ********** -->
+
+	<main-panel>
+		<offsets>
+			<x-m>3.3925</x-m>
+		</offsets>
+	</main-panel>
+
+	<nav-panel>
+		<offsets>
+			<z-m>0.5497</z-m>
+		</offsets>
+	</nav-panel>
+<!--
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Models/aoa.xml</path>
+		<offsets>
+			
+			<x-m alias="../../../main-panel/offsets/x-m"/>
+			<y-m>-0.263492</y-m>
+			<z-m> 0.77601</z-m>
+		</offsets>
+	</model>
+
+	
+
+-->
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/standby_ai.xml</path>
+	
+		<offsets>
+			<x-m>3.39</x-m>
+			<y-m>0.105</y-m>
+			<z-m>0.73</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.8</x-offset>
+    <y-offset>0.85</y-offset>
+    <z-offset>0.8</z-offset>
+   </animation>
+  </overlay>
+	</model>
+	
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/attitude_rb.xml</path>
+		<offsets>
+			<x-m>3.39</x-m>
+			<y-m>-0.093</y-m>
+			<z-m>0.615</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="101">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.7</x-offset>
+    <y-offset>0.85</y-offset>
+    <z-offset>0.65</z-offset>
+   </animation>
+  </overlay>
+	</model>
+	
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/altimeter_vsi.xml</path>
+		<offsets>
+			<x-m>3.39</x-m>
+			<y-m>-0.21</y-m>
+			<z-m>0.615</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="101">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.7</x-offset>
+    <y-offset>0.85</y-offset>
+    <z-offset>0.65</z-offset>
+   </animation>
+  </overlay>
+	</model>
+	
+	
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/fast_erect_panel.xml</path>
+		<offsets>
+			<x-m>3.39</x-m>
+			<y-m>-0.27</y-m>
+			<z-m>0.63</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="101">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.7</x-offset>
+    <y-offset>0.7</y-offset>
+    <z-offset>0.9</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/nav_display.xml</path>
+		<offsets>
+			<x-m>3.39</x-m>
+			<y-m>0.06</y-m>
+			<z-m>0.615</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="102">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.7</x-offset>
+    <y-offset>0.85</y-offset>
+    <z-offset>0.65</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/speed_display.xml</path>
+		
+		<offsets>
+			<x-m>3.39</x-m>
+			<y-m>-0.115</y-m>
+			<z-m>0.7</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="103">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.7</x-offset>
+    <y-offset>0.79</y-offset>
+    <z-offset>0.7</z-offset>
+   </animation>
+  </overlay>
+	</model>
+	
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/clock/clock.xml</path>
+		
+		<offsets>
+			<x-m>3.387</x-m>
+			<y-m>-0.14</y-m>
+			<z-m>0.805</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="103">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>1</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/standby_heading_indicator.xml</path>
+		<offsets>
+			<x-m>3.39</x-m>
+			<y-m>0.208</y-m>
+			<z-m>0.798</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="104">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.7</x-offset>
+    <y-offset>0.79</y-offset>
+    <z-offset>0.7</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/exh2.xml</path>
+		
+		<offsets>
+			<x-m>3.39</x-m>
+			<y-m>0.238</y-m>
+			<z-m>0.625</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="105">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.7</x-offset>
+    <y-offset>0.79</y-offset>
+    <z-offset>0.7</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/exh1.xml</path>
+	
+	<offsets>
+			<x-m>3.39</x-m>
+			<y-m>0.177</y-m>
+			<z-m>0.625</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="106">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.7</x-offset>
+    <y-offset>0.79</y-offset>
+    <z-offset>0.7</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/rpm.xml</path>
+<offsets>
+			<x-m>3.39</x-m>
+			<y-m>0.181</y-m>
+			<z-m>0.673</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="107">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.67</x-offset>
+    <y-offset>0.67</y-offset>
+    <z-offset>0.67</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/rpm2.xml</path>
+		
+		<offsets>
+			<x-m>3.39</x-m>
+			<y-m>0.238</y-m>
+			<z-m>0.673</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="108">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.67</x-offset>
+    <y-offset>0.67</y-offset>
+    <z-offset>0.67</z-offset>
+   </animation>
+  </overlay>
+
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/rpm3.xml</path>
+		<offsets>
+			<x-m>3.39</x-m>
+			<y-m>0.177</y-m>
+			<z-m>0.57</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="109">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.7</x-offset>
+    <y-offset>0.79</y-offset>
+    <z-offset>0.7</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/rpm4.xml</path>
+		
+		<offsets>
+			<x-m>3.39</x-m>
+			<y-m>0.238</y-m>
+			<z-m>0.57</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="110">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.7</x-offset>
+    <y-offset>0.79</y-offset>
+    <z-offset>0.7</z-offset>
+   </animation>
+  </overlay>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/fuel-flow-rate.xml</path>
+		
+		<offsets>
+			<x-m>3.4</x-m>
+			<y-m>0.238</y-m>
+			<z-m>0.74</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="101">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.67</x-offset>
+    <y-offset>0.67</y-offset>
+    <z-offset>0.67</z-offset>
+   </animation>
+   </overlay>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/fuel-used-total.xml</path>
+		
+			<offsets>
+			<x-m>3.4</x-m>
+			<y-m>0.29</y-m>
+			<z-m>0.585</z-m>
+		</offsets>
+		<overlay>
+		 <animation n="101">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.67</x-offset>
+    <y-offset>0.67</y-offset>
+    <z-offset>0.67</z-offset>
+   </animation>
+   </overlay>
+	</model>
+
+<!--
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/mag_indicator_oilp-2.xml</path>
+		
+		<offsets>
+			<x-m alias="../../../main-panel/offsets/x-m"/>
+			<y-m>0.169453</y-m>
+			<z-m>0.476156</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/mag_indicator_oilp-1.xml</path>
+		
+		<offsets>
+			<x-m alias="../../../main-panel/offsets/x-m"/>
+			<y-m>0.313475</y-m>
+			<z-m>0.476156</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/lp_ospeed1.xml</path>
+		<offsets>
+			<x-m alias="../../../main-panel/offsets/x-m"/>
+			<y-m>0.356726</y-m>
+			<z-m>0.634352</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/lp_ospeed2.xml</path>
+		<offsets>
+			<x-m alias="../../../main-panel/offsets/x-m"/>
+			<y-m>0.324243</y-m>
+			<z-m>0.629711</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/lp_rotating.xml</path>
+		
+		<offsets>
+			<x-m alias="../../../main-panel/offsets/x-m"/>
+			<y-m>0.238957</y-m>
+			<z-m>0.681322</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/Blackburn-Buccaneer/Instruments/uc_warning.xml</path>
+		
+		<offsets>
+			<x-m alias="../../../main-panel/offsets/x-m"/>
+			<y-m>0.0285894</y-m>
+			<z-m>0.689829</z-m>
+		</offsets>
+	</model>
+	
+	-->
+	
+	
+	
+	
+	
+	
+</PropertyList>

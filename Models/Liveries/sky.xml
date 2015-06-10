@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Sky</name>
+     <texture-rear-fuselage>Liveries/rae/bucrfus1.jpg</texture-rear-fuselage>
+	  <texture-canopy>Liveries/rae/buccanop1.jpg</texture-canopy>
+      <texture-forward-fuselage>Liveries/rae/bucffus1.jpg</texture-forward-fuselage>
+  <texture-pwt>Liveries/rae/bucwngpt1.jpg</texture-pwt>
+  <texture-pwb>Liveries/rae/bucwngpb1.jpg</texture-pwb>
+  <texture-swt>Liveries/rae/bucwngst1.jpg</texture-swt>
+   <texture-swb>Liveries/rae/bucwngsb1.jpg</texture-swb>
+
+      </livery>
+    </model>
+  </sim>
+
+</PropertyList>

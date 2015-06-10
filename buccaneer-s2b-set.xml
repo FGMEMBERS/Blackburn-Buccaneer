@@ -1,0 +1,803 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Blackburn Buccaneer simulation config. This files ties together 
+all the components used by FGFS to represent the aircraft. Components include 
+the flight data model, instrument panel, and external 3D model. Lots still relies
+on the Hawker Hunter/
+
+Ver 0.0.1
+
+
+************************************************************************
+-->
+<PropertyList>
+	<sim include="help.xml">
+		<description type="string" >Blackburn Buccaneer S2B(YASim)</description>
+		<author type="string">Vivian Meazza, AJ MacLeod. Melchior Franz, Alphasim, Stuart C</author>
+		<status type="string">dev1c</status>
+		<virtual-cockpit archive="y">true</virtual-cockpit>
+		<flight-model>yasim</flight-model>
+		<aero>buccaneer-yasim</aero>
+		<fuel-fraction>1.0</fuel-fraction>
+
+		<!--
+		<systems>
+			<autopilot>
+				<path>Aircraft/Blackburn-Buccaneer/Systems/buccaneer-autopilot.xml</path>
+			</autopilot>
+			
+		</systems>
+		-->
+		
+		<systems>
+
+			<autopilot>
+				<path>Aircraft/Blackburn-Buccaneer/Systems/autopilot5.xml</path>
+				
+			</autopilot>
+
+		<electrical>
+        <path>Aircraft/Generic/generic-electrical.xml</path>
+      </electrical>
+	  <refuel>
+  <type>probe</type>
+  <serviceable type="bool">true</serviceable>
+ </refuel>
+
+		</systems>
+
+
+
+		<sound>
+			<path>Aircraft/Blackburn-Buccaneer/Sounds/buccaneer-sound.xml</path>
+		</sound>
+
+		
+
+		<rendering>
+			<redout>
+				<parameters>
+					<blackout-onset-g type="double">4.5</blackout-onset-g>
+					<blackout-complete-g type="double">6.0</blackout-complete-g>
+				</parameters>
+			</redout>
+			<ambient-correction type="double">0.0</ambient-correction>
+			<refl-correction type="double">-0.5</refl-correction>
+		</rendering>
+<!--
+		<menubar>
+			<default>
+				<menu n="1000">
+					<label>Buccaneer</label>
+					<enabled type="bool">true</enabled>
+					<item>
+						<label>Toggle pilot model</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>/sim/model/buccaneer/config/show-pilot</property>
+						</binding>
+					</item>
+					<item>
+						<label>Toggle G-induced head movement</label>
+						<binding>
+							<command>property-toggle</command>
+							<property>/sim/headshake/enabled</property>
+						</binding>
+					</item>
+				</menu>
+			</default>
+		</menubar>
+-->
+		<model>
+			<path>Aircraft/Blackburn-Buccaneer/Models/Buccaneer-S2B.xml</path>
+
+  <livery>
+   <file type="string"/>
+  </livery>
+
+			
+		</model>
+
+		<view n="0">
+			<internal archive="y">true</internal>
+			<config>
+				<x-offset-m archive="y">-0.00</x-offset-m>
+				<y-offset-m archive="y">1.49045</y-offset-m>
+				<z-offset-m archive="y">-5.3</z-offset-m>
+				<pitch-offset-deg>-20</pitch-offset-deg>
+				<default-field-of-view-deg>70</default-field-of-view-deg>
+				<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</right>
+				</limits>
+			</config>
+		</view>
+		
+		<view n="100">
+			<name>Back Seat View</name>
+			<internal archive="y">true</internal>
+			<type>lookfrom</type>
+			<config>
+				<from-model type="bool">true</from-model>
+				<ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+			<x-offset-m archive="y">-0.00</x-offset-m>
+				<y-offset-m archive="y">1.6</y-offset-m>
+				<z-offset-m archive="y">-4.2</z-offset-m>
+				<pitch-offset-deg>-15</pitch-offset-deg>
+				<default-field-of-view-deg>70</default-field-of-view-deg>
+				<dynamic-view type="bool">false</dynamic-view>
+				<limits>
+					<enabled type="bool">true</enabled>
+					<left>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</left>
+					<right>
+						<heading-max-deg type="double">140</heading-max-deg>
+						<x-offset-max-m type="double">0.20</x-offset-max-m>
+						<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+					</right>
+				</limits>
+			</config>
+		</view>
+		<!--
+		<view n="101">
+			<name>Gun Camera View</name>
+			<type>lookfrom</type>
+			<internal archive="y">true</internal>
+			<config>
+				<from-model type="bool">true</from-model>
+				<from-model-idx type="int">0</from-model-idx>
+				<ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+				<default-field-of-view-deg type="double">30</default-field-of-view-deg>
+				<pitch-offset-deg>-15</pitch-offset-deg>
+				<x-offset-m archive="y">0.0</x-offset-m>
+				
+				<y-offset-m archive="y">-0.531504</y-offset-m>
+				
+				<z-offset-m archive="y">1.92197</z-offset-m>
+				
+			</config>
+		</view>
+		-->
+
+		<flaps>
+			<setting>0.00</setting>
+			<setting>0.333</setting>
+			<setting>0.667</setting>
+			<setting>1.00</setting>
+		</flaps>
+		<aileron-droop>
+			<setting>0.00</setting>
+			<setting>0.4</setting>
+			<setting>0.80</setting>
+			<setting>1.00</setting>
+		</aileron-droop>
+		<airbrake>
+			<setting>0.00</setting>
+			<setting>0.25</setting>
+			<setting>0.5</setting>
+			<setting>0.75</setting>
+			<setting>1.00</setting>
+		</airbrake>
+
+		<aoa-indexer>
+			<too-slow-deg>8.7</too-slow-deg>
+			<slow-deg>6.7</slow-deg>
+			<fast-deg>4.7</fast-deg>
+			<too-fast-deg>2.7</too-fast-deg>
+			<bug>0</bug>
+			<bug>-50</bug>
+		</aoa-indexer>
+
+		<remote>
+			<pilot-callsign>G-VMM2</pilot-callsign>
+		</remote>
+
+	<menubar include="Dialogs/menu.xml"/>	
+		
+	</sim>
+
+	<systems>
+		<refuel>
+			<type>probe</type>
+		</refuel>
+	</systems>
+
+	<!--we use these properties for "aliasing" multiplayer properties-->
+	
+	<engines>
+		<engine n="0">
+			<rpm type="float">0</rpm>
+			<smoking type="bool">true</smoking>
+			<running type="bool">true</running>
+		</engine>
+		<engine n="1">
+			<rpm type="float">1</rpm>
+			<smoking type="bool">true</smoking>
+			<running type="bool">true</running>
+		</engine>
+		<engine n="2">
+			<n1 type="float">0</n1>
+			<n2 type="float">0</n2>
+			<rpm type="float">2</rpm>
+		</engine>
+		<engine n="3">
+			<n1 type="float">0</n1>
+			<n2 type="float">0</n2>
+			<rpm type="float">3</rpm>
+		</engine>
+		<engine n="4">
+			<n1 type="float">0</n1>
+			<n2 type="float">0</n2>
+			<rpm type="float">4</rpm>
+		</engine>
+		<!--<engine n="5">
+			<n1 type="float">0</n1>
+			<n2  type="float">0</n2>
+			<rpm type="float">5</rpm>
+		</engine>
+		<engine n="6">
+			<n1>0</n1>
+			<n2>0</n2>
+			<rpm>0</rpm>
+		</engine>
+		<engine n="7">
+			<n1>0</n1>
+			<n2>0</n2>
+			<rpm>0</rpm>
+		</engine>
+		<engine n="8">
+			<n1>0</n1>
+			<n2>0</n2>
+			<rpm>0</rpm>
+		</engine>-->
+	</engines>
+
+	<!-- *************** set properties for own aircraft **********************-->
+	<consumables>
+		<fuel>
+			<tank n="0">
+				<name type="string">#1</name>
+				<selected type="bool">0</selected>
+				<level-lbs type="double">0</level-lbs>
+			</tank>
+			<tank n="1">
+				<name type="string">#2</name>
+				<selected type="bool">0</selected>
+				<level-lbs type="double">0</level-lbs>
+			</tank>
+			<tank n="2">
+				<name type="string">#3</name>
+				<selected type="bool">0</selected>
+				<level-lbs type="double">0</level-lbs>
+			</tank>
+			<tank n="3">
+				<name type="string">#4</name>
+				<selected type="bool">0</selected>
+				<level-lbs type="double">0</level-lbs>
+			</tank>
+			<tank n="4">
+				<name type="string">#5</name>
+				<selected type="bool">0</selected>
+				<level-lbs type="double">0</level-lbs>
+			</tank>
+			<tank n="5">
+				<name type="string">#6</name>
+				<selected type="bool">0</selected>
+				<level-lbs type="double">0</level-lbs>
+			</tank>
+			<tank n="6">
+				<name type="string">#7</name>
+				<selected type="bool">0</selected>
+				<level-lbs type="double">0</level-lbs>
+			</tank>
+			<tank n="7">
+				<name type="string">#8</name>
+				<selected type="bool">0</selected>
+				<level-lbs type="double">0</level-lbs>
+			</tank>
+			<tank n="8">
+				<name type="string">Prop Port</name>
+				<selected type="bool">1</selected>
+				<level-lbs type="double">0</level-lbs>
+			</tank>
+			<tank n="9">
+				<name type="string">Prop Stbd</name>
+				<selected type="bool">1</selected>
+				<level-lbs type="double">0</level-lbs>
+			</tank>
+			<tank n="10">
+				<name type="string">Recup Port</name>
+				<selected type="bool">0</selected>
+				<level-lbs type="double">0</level-lbs>
+			</tank>
+			<tank n="11">
+				<name type="string">Recup Stbd</name>
+				<selected type="bool">0</selected>
+				<level-lbs type="double">0</level-lbs>
+			</tank>
+		</fuel>
+	</consumables>
+
+	<controls>
+		<gear>
+			<brake-parking>1</brake-parking>
+			<tailwheel-lock>false</tailwheel-lock>
+			<launchbar>
+				<acceleration-norm type="float">0.75</acceleration-norm>
+			</launchbar>
+		</gear>
+	
+	</controls>
+	
+
+	<!-- hsi heading bug and source select-->
+	<instrumentation>
+		<heading-indicator>
+			<heading-bug-deg type="double">95</heading-bug-deg>
+			<heading-source type="bool">true</heading-source>
+		</heading-indicator>
+		<heading-indicator>
+			<heading-bug-deg type="double">45</heading-bug-deg>
+		</heading-indicator>
+
+		<!-- Radar parameters -->
+		<air-ground-radar>
+			<serviceable type="bool">true</serviceable>
+			<switch type="string">ON</switch>
+			<threshold>0.18</threshold>
+			<mode-control type="int">6</mode-control>
+			<scan-sec type="double">1</scan-sec>
+			<display-controls>
+				<WX type="bool">false</WX>
+				<pos type="bool">true</pos>
+				<data type="bool">false</data>
+				<symbol type="bool">false</symbol>
+			</display-controls>
+			<range type="int">30</range>
+			<!--<mode type="string">SV</mode>-->
+			<lightning type="bool">false</lightning>
+			<display-mode type="string">arc</display-mode>
+			<minimized type="bool">false</minimized>
+			<echo-texture-path>Aircraft/Instruments/Textures/wxecho-orange.rgb</echo-texture-path>
+			<antenna>
+				<x-offset-m type="double">0</x-offset-m>
+				<y-offset-m type="double">-0.5</y-offset-m>
+				<z-offset-m type="double">0</z-offset-m>
+			</antenna>
+			<terrain-warning>
+				<elev-limit-deg type="double">2.5</elev-limit-deg>
+				<elev-step-deg type="double">0.5</elev-step-deg>
+				<az-limit-deg type="double">0</az-limit-deg>
+				<az-step-deg type="double">1</az-step-deg>
+				<max-range-m type="double">4000</max-range-m>
+				<min-range-m type="double">250</min-range-m>
+				<tilt type="double">-2</tilt>
+				<stabilisation>
+					<roll type="bool">true</roll>
+					<pitch type="bool">false</pitch>
+				</stabilisation>
+				<scan-sec type="double">0.2222</scan-sec>
+				<beamwidth-horz-deg type="double">2.5</beamwidth-horz-deg>
+				<beamwidth-vert-deg type="double">1</beamwidth-vert-deg>
+				<persistance-sec type="double">3</persistance-sec>
+			</terrain-warning>
+			<surveillance>
+				<elev-limit-deg type="double">0</elev-limit-deg>
+				<elev-step-deg type="double">0.25</elev-step-deg>
+				<az-limit-deg type="double">50</az-limit-deg>
+				<az-step-deg type="double">2.5</az-step-deg>
+				<max-range-m type="double">120000</max-range-m>
+				<min-range-m type="double">1000</min-range-m>
+				<tilt type="double">-2.5</tilt>
+				<stabilisation>
+					<roll type="bool">true</roll>
+					<pitch type="bool">true</pitch>
+				</stabilisation>
+				<scan-sec type="double">0.2222</scan-sec>
+				<persistance-sec type="double">6</persistance-sec>
+				<beamwidth-horz-deg type="double">5</beamwidth-horz-deg>
+				<beamwidth-vert-deg type="double">2.5</beamwidth-vert-deg>
+			</surveillance>
+			<acquisition>
+				<elev-limit-deg type="double">0</elev-limit-deg>
+				<elev-step-deg type="double">0.25</elev-step-deg>
+				<az-limit-deg type="double">10</az-limit-deg>
+				<az-step-deg type="double">2.5</az-step-deg>
+				<max-range-m type="double">120000</max-range-m>
+				<min-range-m type="double">1000</min-range-m>
+				<tilt type="double">-1.0</tilt>
+				<stabilisation>
+					<roll type="bool">true</roll>
+					<pitch type="bool">true</pitch>
+				</stabilisation>
+				<scan-sec type="double">0.2222</scan-sec>
+				<persistance-sec type="double">2</persistance-sec>
+				<beamwidth-horz-deg type="double">5</beamwidth-horz-deg>
+				<beamwidth-vert-deg type="double">2.5</beamwidth-vert-deg>
+				<display-mode type="string">arc</display-mode>
+			</acquisition>
+		</air-ground-radar>
+
+		<!-- Radar Altimeter parameters -->
+		<radar-altimeter>
+			<switch type="string">ON</switch>
+			<serviceable type="bool">true</serviceable>
+			<antenna>
+				<x-offset-m type="double">-2.660540</x-offset-m>
+				<y-offset-m type="double">0</y-offset-m>
+				<z-offset-m type="double">-0.6275650</z-offset-m>
+			</antenna>
+			<set-height-ft>1000</set-height-ft>
+			<set-excursion-percent>5</set-excursion-percent>
+			<beamwidth-deg>10</beamwidth-deg>
+		</radar-altimeter>
+	</instrumentation>
+
+		
+		<systems>
+
+			<autopilot>
+				<path>Aircraft/Blackburn-Buccaneer/Systems/autopilot5.xml</path>
+				
+			</autopilot>
+
+		<electrical>
+        <path>Aircraft/Generic/generic-electrical.xml</path>
+      </electrical>
+	  <refuel>
+  <type>probe</type>
+  <serviceable type="bool">true</serviceable>
+ </refuel>
+
+		</systems>
+
+	
+
+	<!-- map keyboard input -->
+	<input>
+		<keyboard>
+			<!-- map keys for airbrake interlock -->
+			<key n="2">
+				<name>Ctrl-B</name>
+				<desc>Toggle speedbrake.</desc>
+				<binding>
+					<command>property-toggle</command>
+					<property>/controls/flight/speedbrake</property>
+				</binding>
+			</key>
+			
+			 <key n="68">
+    <name>D</name>
+    <desc>Passenger door</desc>
+    <binding>
+      <command>nasal</command>
+      <script>doors.doorsystem.passengerexport();</script>
+    </binding>
+  </key>
+
+   <key n="100">
+    <name>d</name>
+    <desc>Crew door</desc>
+    <binding>
+      <command>nasal</command>
+      <script>doors.doorsystem.crewexport();</script>
+    </binding>
+  </key>
+			
+			<!-- formatio selection -->
+			
+			
+			<key n="61">
+				<name>=</name>
+				<desc>Show configuration dialog</desc>
+				<binding>
+					<command>nasal</command>
+					<script>buccaneer.formation_dialog.toggle()</script>
+				</binding>
+			</key>
+			
+			
+			<!-- map keys for arrester hook -->
+			<key n="79">
+				<name>O</name>
+				<desc>Hook down.</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/gear/tailhook</property>
+					<value type="double">1.0</value>
+				</binding>
+			</key>
+			
+			
+			<key n="111">
+				<name>o</name>
+				<desc>Hook Up.</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>controls/gear/tailhook</property>
+					<value type="double">0.0</value>
+				</binding>
+			</key>
+			
+			
+			<!-- map keys for wing fold -->
+			 <key n="102">
+    <name>f</name>
+    <desc>Wings</desc>
+    <binding>
+     <command>nasal</command>
+     <script>doors.doorsystem.wingsexport();</script>
+    </binding>
+   </key>
+			
+			<!-- map keys for seat vertical adjust -->
+			<key n="21">
+				<name>CTRL-U</name>
+				<desc>Seat Default.</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/seat/vertical-adjust</property>
+					<value type="double">0</value>
+				</binding>
+				<binding>
+					<condition>
+						<equals>
+							<property>sim/current-view/view-number</property>
+							<value>0</value>
+						</equals>
+					</condition>
+					<command>property-assign</command>
+					<property>sim/current-view/y-offset-m</property>
+					<value type="double">1.09045</value>
+				</binding>
+			</key>
+			
+			
+			<key n="85">
+				<name>U</name>
+				<desc>Seat Down.</desc>
+				<binding>
+					<command>property-adjust</command>
+					<property>/controls/seat/vertical-adjust</property>
+					<step type="double">-0.01</step>
+					<min type="double">-0.05</min>
+					<max type="double">0.05</max>
+				</binding>
+				<binding>
+					<condition>
+						<equals>
+							<property>sim/current-view/view-number</property>
+							<value>0</value>
+						</equals>
+					</condition>
+					<command>property-adjust</command>
+					<property>sim/current-view/y-offset-m</property>
+					<step type="double">-0.01</step>
+					<min type="double">0.7339</min>
+					<max type="double">0.8339</max>
+				</binding>
+			</key>
+			
+			
+			<key n="117">
+				<name>u</name>
+				<desc>Seat Up.</desc>
+				<binding>
+					<command>property-adjust</command>
+					<property>controls/seat/vertical-adjust</property>
+					<step type="double">0.01</step>
+					<min type="double">-0.05</min>
+					<max type="double">0.05</max>
+				</binding>
+				<binding>
+					<condition>
+						<equals>
+							<property>sim/current-view/view-number</property>
+							<value>0</value>
+						</equals>
+					</condition>
+					<command>property-adjust</command>
+					<property>sim/current-view/y-offset-m</property>
+					<step type="double">0.01</step>
+					<min type="double">0.75</min>
+					<max type="double">0.85</max>
+				</binding>
+			</key>
+			
+
+			
+			
+			
+			<key n="106">
+				<name>j</name>
+				<desc>Decrease airbrake.</desc>
+				<binding>
+					<command>nasal</command>
+					<script>controls.stepProps("/controls/flight/speedbrake","/sim/airbrake",-1);</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>controls.stepProps("/controls/flight/speedbrake","/sim/airbrake",0);</script>
+					</binding>
+				</mod-up>
+			</key>
+			
+			
+			<key n="107">
+				<name>k</name>
+				<desc>Increase airbrake.</desc>
+				<binding>
+					<command>nasal</command>
+					<script>controls.stepProps("/controls/flight/speedbrake","/sim/airbrake",1);</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>controls.stepProps("/controls/flight/speedbrake","/sim/airbrake",0);</script>
+					</binding>
+				</mod-up>
+			</key>
+
+			<key n="10">
+				<name>Ctrl-J</name>
+				<desc>Jettison Inner and Outer Pylon Stores.</desc>
+				<!-- port inner -->
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/armament/station[0]/jettison-all</property>
+					<value type="bool">1</value>
+				</binding>
+				<!--<binding>
+					<command>property-assign</command>
+					<property>/yasim/weights/tank-100gal-lbs[0]</property>
+					<value type="double">0.0</value>
+				</binding>-->
+				<binding>
+					<command>property-assign</command>
+					<property>controls/armament/station[1]/jettison-all</property>
+					<value type="bool">1</value>
+				</binding>
+				<!--<binding>
+					<command>property-assign</command>
+					<property>/yasim/weights/tank-100gal-lbs[1]</property>
+					<value type="double">0.0</value>
+				</binding>-->
+			</key>
+			
+			<key n="81">
+				<name>Q</name>
+				<desc>Switch to previous model</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						globals["model-view"].model_view_handler.next(-1);
+						globals["model-cockpit-view"].model_view_handler.next(-1)
+					</script>
+				</binding>
+			</key>
+			
+			
+			<key n="113">
+				<name>q</name>
+				<desc>Switch to next model</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						globals["model-view"].model_view_handler.next(1);
+						globals["model-cockpit-view"].model_view_handler.next(1)
+					</script>
+				</binding>
+			</key>
+			
+			
+			<key n="84">
+				<name>T</name>
+				<desc>Autotrim cancel</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						setprop("controls/flight/elevator-trim",0);
+						setprop("controls/flight/aileron-trim",0);
+						setprop("controls/flight/rudder-trim",0);
+					</script>
+				</binding>
+			</key>
+			
+			
+			<key n="116">
+				<name>t</name>
+				<desc>Autotrim</desc>
+				<binding>
+					<command>nasal</command>
+					<script>aircraft.autotrim.start()</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>aircraft.autotrim.stop()</script>
+					</binding>
+				</mod-up>
+			</key>
+			
+			<key n="123">
+     <name>}</name>
+     <desc>Engine Autostop</desc>
+    <binding>
+        <command>nasal</command>
+        <script>emu.autostop();</script>
+    </binding>
+  </key>
+  
+   <key n="125">
+     <name>}</name>
+     <desc>Engine Autostart</desc>
+    <binding>
+        <command>nasal</command>
+        <script>emu.autostart();</script>
+    </binding>
+  </key>
+		</keyboard>
+	</input>
+
+	
+
+	
+
+	<environment>
+		<params>
+			<contrail-altitude type="double">50000</contrail-altitude>
+		</params>
+	</environment>
+
+<nasal>
+
+<blackburn-buccaneer>
+			<!--file>Aircraft/Blackburn-Buccaneer/Nasal/buccaneer-utils.nas</file-->
+			<file>Aircraft/Blackburn-Buccaneer/Systems/fuel-system.nas</file>
+			<file>Aircraft/Blackburn-Buccaneer/Nasal/liveries.nas</file>
+</blackburn-buccaneer>
+
+<doors>
+<file>Aircraft/Blackburn-Buccaneer/Nasal/doors.nas</file>
+</doors>
+
+<blackburn-buccaneer-electrical>
+			<file>Aircraft/Blackburn-Buccaneer/Systems/buccaneer-electrical.nas</file>
+</blackburn-buccaneer-electrical>
+
+<blackburn-buccaneer-air-bleed>
+			<file>Aircraft/Blackburn-Buccaneer/Systems/buccaneer-air-bleed.nas</file>
+</blackburn-buccaneer-air-bleed>
+<!--
+
+<canvas_HUD>
+			<file>Aircraft/Blackburn-Buccaneer/Systems/TSR2-canvas-HUD.nas</file>
+</canvas_HUD>
+-->
+<engines>
+   <file>Aircraft/Blackburn-Buccaneer/Nasal/generic-yasim-engine.nas</file>
+  </engines>
+  
+  <emu>
+   <file>Aircraft/Blackburn-Buccaneer/Nasal/emu.nas</file>
+  </emu>
+
+
+</nasal>	
+	
+
+</PropertyList>
