@@ -5,4 +5,4 @@ http://fguk.eu/index.php/hangar/viewdownload/8-military-jets/394-blackburn-bucca
 
 * S2B Version dev1e
 * Corrected Path errors
-* License undeclared: FGMEMBERs temporarily restricts as CC: BY NC SA
+
